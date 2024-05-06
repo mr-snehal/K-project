@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDF8EE;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 85px;
+}
+
+.navbar h1 {
+    font-size: 1.5rem; 
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    column-gap: 20px;
+}
+
+ul li {
+    margin-right: 10px;
+    
+}
+ul li a:hover {
+    background-color: rgb(56, 21, 88);
+    color: white;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+ul a {
+    text-decoration: none;
+    color: black; 
+}
+.menu-btn {
+    font-size: 30px;
+    color: rgb(54, 23, 98);
+    cursor: pointer;
+    display: none;
+}
+#click {
+        display: none;
+
+    }
+/* .div1 {
+    width: 700px;
+} */
+.div2 img {
+    width: 750px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        /* flex-direction: column; 
+        align-items: center;  */
+        
+    }
+    
+    ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #FDF8EE;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+    ul li {
+        margin: 40px 0; 
+        
+        
+    }
+    ul li a {
+        font-size: 18px;
+    } 
+    ul li a:hover {
+        background-color: rgb(157, 68, 212);
+        padding: 5px;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+    } 
+    .btn {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    .btn:hover {
+        font-size: 20px;
+    }
+    .menu-btn {
+        display: block;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    #click:checked ~ .menu-btn :before{
+        content: "\F62A";
+    }
+    
+    
+    
+}
